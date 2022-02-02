@@ -1,0 +1,33 @@
+ <!вложенность блоков>
+   <div class="about">
+      <div class="title"></div>
+      <div class="subtitle"></div>
+   </div>
+
+   <nav class="menu">
+      <a href="" class="item__link"></a><a href="" class="item__link"></a><a href="" class="item__link"></a><a href="" class="item__link"></a>
+   </nav>
+
+<!вложенность эл-тов>
+   <div class="row">
+      <div class="row__column">
+         <div class="row__item"></div>
+      </div>
+   </div>
+<!эл-т должен быть частью блока, но не увсех
+блоков должны быть эл-ты>
+
+<!модификатор>
+<!блок меню>
+<nav class="menu">
+   !<--.элемент 'item' и модификатор 'active'.-->
+   <a href="" class="menu__item menu__item_active">HOME</a>
+
+</nav>
+
+   <!микс, прием где можно использовать
+   и блоки и эл-ты>
+   <div class="about">
+      <!эл-т title>
+      <div class="about__title title"></div>
+   </div>

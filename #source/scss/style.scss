@@ -1,0 +1,315 @@
+
+@import "nullstyle.scss";
+
+//transform работает с блочными обьектами
+
+html,body {
+   
+	height: 100%;
+	background-color: #333;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	color: #fff;
+	font-size: 16px;
+	line-height: 24px;
+}
+a {
+	color: #794f45;
+}
+h1 {
+	font-size: 40px;
+	margin: 4px 0px 50px 0px;
+}
+h2 {
+	font-size: 30px;
+	margin: 0px 0px 20px 0px;
+}
+p {
+	margin: 20px 0;
+}
+
+.wrapper {
+   
+   min-height: 100%;
+	overflow: hidden;
+   .content__2D .content__block div {
+      
+      display: flex;
+      text-transform: uppercase;
+      justify-content: center;
+      align-items: center;
+      letter-spacing: 1px;
+      text-align: center;
+      width: 150px;
+      height: 150px;
+
+      //для плавной анимации
+      transition: all 0.8s ease 0s;
+   }
+   
+   
+   .content__3D .content__wrapper3d div {
+      
+      display: flex;
+      text-transform: uppercase;
+      justify-content: center;
+      align-items: center;
+      letter-spacing: 1px;
+      text-align: center;
+      transition: all 0.8s ease 0s;
+      width: 150px;
+      height: 150px;
+   }
+}
+.content {
+   padding: 30px 3%;
+
+		// .content__2D
+
+		&__2D {
+		}
+
+		// .content__block
+
+		&__block {
+         margin: 0px 0px 50px 32px;
+		}
+
+		// .content__translate
+
+		&__translate {
+         background-color: #794f45;
+         //можно поставить по центру
+         position: relative;
+         left: 50%;
+         transform: translate(-50%,0);
+		}
+      &__translate:hover{
+         transform: translate(20px, 20px);
+      }
+
+		// .content__scale
+
+		&__scale {
+         transform: scale(1, 1);
+	      background-color: #77608d;
+		}
+      &__scale:hover{
+         transform: scale(-2, -1);
+      }
+
+		// .content__rotate
+
+		&__rotate {
+         transform: rotate(-45deg);
+	      background-color: #7a956b;
+		}
+      &__rotate:hover{
+         transform: rotate(1125deg);
+      }
+
+		// .content__skew
+
+		&__skew {
+         transform: skew(10deg,10deg);
+         background-color: #794f45;
+         
+		}
+      &__skew:hover{
+         transform: skew(10deg,20deg);
+      }
+      
+
+		// .content__matrix
+
+		&__matrix {
+         transform: matrix(1, 0, 0, 1, 0, 0);
+	      background-color: #77608d;
+		}
+
+		// .content__multi
+
+		&__multi {
+         background-color: #7a956b;
+         transform: translate(50px, 50px) scale(0.5) rotate(45deg);
+      
+		}
+
+		// .content__transform-origin
+
+		&__transform-origin {
+         background-color: #794f45;
+         transform-origin: 0 0;
+         transform: rotate(0deg);
+      
+		}
+      &__transform-origin:hover {
+         transform: rotate(-20deg);
+      }
+}
+.content {
+
+   // .content__3D
+
+   &__3D {
+   }
+
+   // .content__block
+
+   &__block {
+   }
+
+   // .content__wrapper3d
+
+   &__wrapper3d {
+      
+      width: 150px;
+      height: 150px;
+      background-color: rgba(255, 255, 255, 0.1);
+
+      perspective-origin: center;
+      perspective: 400px;
+   }
+
+   // .content__perspective
+
+   &__perspective {
+      background-color: #7a956b;
+	   
+   }
+   &__perspective:hover{
+      transform: rotateX(50deg);
+   }
+
+   // .content__translate3D
+
+   &__translate3D {
+      transform: translate3D(0px, 0px, 0px);
+      background-color: #794f45;
+   
+   }
+   &__translate3D:hover {
+      transform: translate3D(20px, 20px, 50px);
+   }
+
+   // .content__scale3D
+   
+
+   &__scale3D {
+      transform: scale3d(1, 1, 1);
+      background-color: #77608d;
+   
+   }
+   &__scale3D:hover {
+      transform: scale3d(2, -1, 2);
+   }
+   // .content__rotate3d
+
+   &__rotate3d {
+      transform: rotate3d(1, 1, 1, 0deg);
+      background-color: #7a956b;
+   
+   }
+   &__rotate3d:hover {
+      transform: rotate3d(1, 1, 1, 45deg);
+   }
+
+   // .content__matrix3d
+
+   &__matrix3d {//смотри шпаргалку
+   }
+
+   // .content__multi3d
+
+   &__multi3d {
+      background-color: #794f45;
+      transform: translate3d(20px, 20px, 20px) rotate3d(1, 1, 1, 10deg);
+   
+   }
+
+   // .content__transform-style-wrapper
+
+   &__transform-style-wrapper {
+      width: 150px;
+      height: 150px;
+      background-color: rgba(255, 255, 255, 0.1);
+      perspective: 400px;
+      transform-style: preserve-3d;
+   
+   }
+
+   // .content__transform-style
+
+   &__transform-style {
+      display: flex;
+      text-transform: uppercase;
+      justify-content: center;
+      align-items: center;
+      letter-spacing: 1px;
+      text-align: center;
+      transition: all 0.8s ease 0s;
+      width: 150px;
+      height: 150px;
+      transform: rotateX(0deg);
+      background-color: #7a956b;
+   
+   }
+   &__transform-style:hover {
+      transform: rotateX(50deg);
+   }
+}
+.flip {
+
+   // .flip__body
+
+   &__body {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      transition: all 0.8s ease 0s;
+      transform-style: preserve-3d;
+      
+   
+   }
+
+   // .flip__front
+
+   &__front {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 2;
+      transform: rotateY(0deg);
+      background-color: #77608d;
+      
+      //чтоб после поворота не было видно
+      backface-visibility: hidden;
+   
+   }
+
+   // .flip__back
+
+   &__back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: rotateY(-180deg);
+      background-color: rgba(121, 79, 69, 0.5);
+   
+   
+   }
+   .flip__body:hover{
+      transform: rotateY(-180deg);
+
+   }
+}
+
